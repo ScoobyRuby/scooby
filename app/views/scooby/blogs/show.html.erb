@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @blog.title %>
+</p>
+
+<p>
+  <strong>Subtitle:</strong>
+  <%= @blog.subtitle %>
+</p>
+
+<p>
+  <strong>Banner image:</strong>
+  <%= image_tag(main_app.url_for(@blog.banner_image), :size => "260x180") if @blog.banner_image.attached? %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @blog.content %>
+</p>
+
+<p>
+  <strong>Release date:</strong>
+  <%= @blog.release_date %>
+</p>
+
+<p>
+  <strong>Is drafted:</strong>
+  <%= @blog.is_drafted %>
+</p>
+
+<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<%= link_to 'Back', blogs_path %>
