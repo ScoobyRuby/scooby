@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
-Rails.application.routes.draw do
-  mount Scooby::Engine => "/scooby"
+Dummy::Application.routes.draw do
+  mount Scooby::Engine => "/blogs"
+  root to: "blogs#index"
 end
