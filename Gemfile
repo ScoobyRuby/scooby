@@ -18,4 +18,4 @@ gemspec
 group :development, :test do
   gem "rspec-rails", "~> 5.0.0"
 end
-gem "rubocop", require: false
+gem "rubocop", ">= 1.66.0", require: false
